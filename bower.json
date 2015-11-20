@@ -1,0 +1,31 @@
+{
+  "name": "sjcam2",
+  "version": "0.0.0",
+  "authors": [
+    "Dmitry Karykin <dmitriy.karyakin@walletone.com>"
+  ],
+  "description": "simple site",
+  "main": "src/index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "license": "MIT",
+  "homepage": "qwertylab.ru",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
