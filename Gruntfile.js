@@ -55,7 +55,6 @@ module.exports = function (grunt) {
       docs: 'docs/dist'
     },
 
-    /*
     jshint: {
       options: {
         jshintrc: 'js/.jshintrc'
@@ -100,29 +99,26 @@ module.exports = function (grunt) {
         src: '<%= jshint.assets.src %>'
       }
     },
-    */
 
     concat: {
-      /*
       options: {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
         stripBanners: false
       },
-      */
       bootstrap: {
         src: [
-          'bower_components/bootstrap/js/transition.js',
-          'bower_components/bootstrap/js/alert.js',
-          'bower_components/bootstrap/js/button.js',
-          'bower_components/bootstrap/js/carousel.js',
-          'bower_components/bootstrap/js/collapse.js',
-          'bower_components/bootstrap/js/dropdown.js',
-          'bower_components/bootstrap/js/modal.js',
-          'bower_components/bootstrap/js/tooltip.js',
-          'bower_components/bootstrap/js/popover.js',
-          'bower_components/bootstrap/js/scrollspy.js',
-          'bower_components/bootstrap/js/tab.js',
-          'bower_components/bootstrap/js/affix.js'
+          'js/transition.js',
+          'js/alert.js',
+          'js/button.js',
+          'js/carousel.js',
+          'js/collapse.js',
+          'js/dropdown.js',
+          'js/modal.js',
+          'js/tooltip.js',
+          'js/popover.js',
+          'js/scrollspy.js',
+          'js/tab.js',
+          'js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -140,7 +136,6 @@ module.exports = function (grunt) {
         src: '<%= concat.bootstrap.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
-      /*
       customize: {
         src: configBridge.paths.customizerJs,
         dest: 'docs/assets/js/customize.min.js'
@@ -149,16 +144,14 @@ module.exports = function (grunt) {
         src: configBridge.paths.docsJs,
         dest: 'docs/assets/js/docs.min.js'
       }
-      */
     },
-    /*
+
     qunit: {
       options: {
         inject: 'js/tests/unit/phantom.js'
       },
       files: 'js/tests/index.html'
     },
-    */
 
     less: {
       compileCore: {
@@ -182,6 +175,10 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      compileThemeFast: {
+        src: 'less/theme.less',
+        dest: 'dist/css/<%= pkg.name %>-theme.css'
       }
     },
 
@@ -201,17 +198,15 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>-theme.css'
       },
-      
-      // docs: {
-      //   src: ['docs/assets/css/src/docs.css']
-      // },
-      // examples: {
-      //   expand: true,
-      //   cwd: 'docs/examples/',
-      //   src: ['**/*.css'],
-      //   dest: 'docs/examples/'
-      // }
-      
+      docs: {
+        src: ['docs/assets/css/src/docs.css']
+      },
+      examples: {
+        expand: true,
+        cwd: 'docs/examples/',
+        src: ['**/*.css'],
+        dest: 'docs/examples/'
+      }
     },
 
     csslint: {
@@ -222,17 +217,16 @@ module.exports = function (grunt) {
         'dist/css/bootstrap.css',
         'dist/css/bootstrap-theme.css'
       ],
-
-      // examples: [
-      //   'docs/examples/**/*.css'
-      // ],
-      // docs: {
-      //   options: {
-      //     ids: false,
-      //     'overqualified-elements': false
-      //   },
-      //   src: 'docs/assets/css/src/docs.css'
-      // }
+      examples: [
+        'docs/examples/**/*.css'
+      ],
+      docs: {
+        options: {
+          ids: false,
+          'overqualified-elements': false
+        },
+        src: 'docs/assets/css/src/docs.css'
+      }
     },
 
     cssmin: {
@@ -251,7 +245,6 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
-      /*
       docs: {
         src: [
           'docs/assets/css/src/pygments-manni.css',
@@ -259,7 +252,6 @@ module.exports = function (grunt) {
         ],
         dest: 'docs/assets/css/docs.min.css'
       }
-      */
     },
 
     csscomb: {
@@ -272,18 +264,16 @@ module.exports = function (grunt) {
         src: ['*.css', '!*.min.css'],
         dest: 'dist/css/'
       },
-      
-      // examples: {
-      //   expand: true,
-      //   cwd: 'docs/examples/',
-      //   src: '**/*.css',
-      //   dest: 'docs/examples/'
-      // },
-      // docs: {
-      //   src: 'docs/assets/css/src/docs.css',
-      //   dest: 'docs/assets/css/src/docs.css'
-      // }
-
+      examples: {
+        expand: true,
+        cwd: 'docs/examples/',
+        src: '**/*.css',
+        dest: 'docs/examples/'
+      },
+      docs: {
+        src: 'docs/assets/css/src/docs.css',
+        dest: 'docs/assets/css/src/docs.css'
+      }
     },
 
     copy: {
@@ -292,15 +282,19 @@ module.exports = function (grunt) {
         src: 'fonts/*',
         dest: 'dist/'
       },
-
-      // docs: {
-      //   expand: true,
-      //   cwd: 'dist/',
-      //   src: [
-      //     '**/*'
-      //   ],
-      //   dest: 'docs/dist/'
-      // }
+      img: {
+        expand: true,
+        src: 'img/*',
+        dest: 'dist/'
+      },
+      docs: {
+        expand: true,
+        cwd: 'dist/',
+        src: [
+          '**/*'
+        ],
+        dest: 'docs/dist/'
+      }
     },
 
     connect: {
@@ -382,6 +376,10 @@ module.exports = function (grunt) {
       less: {
         files: 'less/**/*.less',
         tasks: 'less'
+      },
+      lesstheme: {
+        files: 'less/**/*.less',
+        tasks: 'less:compileThemeFast'
       }
     },
 
@@ -450,7 +448,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Docs HTML validation task
-  // grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
+  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
 
   var runSubset = function (subset) {
     return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
@@ -482,8 +480,8 @@ module.exports = function (grunt) {
     testSubtasks.push('connect');
     testSubtasks.push('saucelabs-qunit');
   }
-  // grunt.registerTask('test', testSubtasks);
-  // grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
+  grunt.registerTask('test', testSubtasks);
+  grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
