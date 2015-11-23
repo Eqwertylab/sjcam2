@@ -329,6 +329,10 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
   -o-transform: skew(8deg) rotate(3deg);
   transform: skew(8deg) rotate(3deg);
 }
+.card {
+  background: #fff;
+  margin-bottom: 50px;
+}
 .footer {
   background-image: url(../img/climpek.jpg);
   min-height: 275px;

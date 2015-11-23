@@ -303,7 +303,6 @@ body {
 
 
 
-
 //
 // Контент
 // --------------------------------------------------
@@ -312,6 +311,7 @@ body {
 
   background: #f7f7f7;
 }
+
 
 
 //
@@ -458,45 +458,47 @@ body {
 {
   position:relative;
   z-index: 1;
+
+  &:before,
+  &:after {
+    content:"";
+    position:absolute;
+    z-index:0;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.4);
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-top-left-radius: 100px 10px;
+    border-top-right-radius: 100px 10px;
+    border-bottom-right-radius: 100px 10px;
+    border-bottom-left-radius: 100px 10px;
+  }
+
+  &:after {
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+  }
 }
 
-.effect6:before, .effect6:after
-{
-  content:"";
-  position:absolute;
-  z-index:0;
-  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.4);
-  -moz-box-shadow:0 0 20px rgba(0,0,0,0.4);
-  box-shadow:0 0 20px rgba(0,0,0,0.4);
-  top:50%;
-  bottom:0;
-  left:10px;
-  right:10px;
-  border-top-left-radius: 100px 10px;
-  border-top-right-radius: 100px 10px;
-  border-bottom-right-radius: 100px 10px;
-  border-bottom-left-radius: 100px 10px;
-}
-
-.effect6:after
-{
-  right:10px;
-  left:auto;
-  -webkit-transform:skew(8deg) rotate(3deg);
-     -moz-transform:skew(8deg) rotate(3deg);
-      -ms-transform:skew(8deg) rotate(3deg);
-       -o-transform:skew(8deg) rotate(3deg);
-          transform:skew(8deg) rotate(3deg);
-}
 
 
 
 //
-// Хлебные крошки
+// Карточка товара
 // --------------------------------------------------
 
-
-
+.card {
+  background: #fff;
+  margin-bottom: 50px;
+}
 
 
 //
