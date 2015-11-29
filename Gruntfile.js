@@ -108,19 +108,28 @@ module.exports = function (grunt) {
       bootstrap: {
         src: [
           'js/transition.js',
-          'js/alert.js',
+          // 'js/alert.js',
           'js/button.js',
-          'js/carousel.js',
+          // 'js/carousel.js',
           'js/collapse.js',
-          'js/dropdown.js',
+          // 'js/dropdown.js',
           'js/modal.js',
-          'js/tooltip.js',
-          'js/popover.js',
-          'js/scrollspy.js',
+          // 'js/tooltip.js',
+          // 'js/popover.js',
+          // 'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          // 'js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      custom: {
+        src: [
+          'js/jquery.bxslider/jquery.bxslider.js',
+          'js/cloudzoom/cloudzoom.js',
+          'js/acces.js',
+          'js/gallery.js'
+        ],
+        dest: 'dist/js/custom.js'
       }
     },
 
@@ -242,7 +251,7 @@ module.exports = function (grunt) {
         dest: 'dist/css/<%= pkg.name %>.min.css'
       },
       minifyTheme: {
-        src: 'dist/css/<%= pkg.name %>-theme.css',
+        src: ['dist/css/<%= pkg.name %>-theme.css', 'js/jquery.bxslider/jquery.bxslider.css', 'js/cloudzoom/cloudzoom.css'],
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
       docs: {

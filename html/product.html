@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="../dist/css/bootstrap.css" rel="stylesheet">
     <link href="../dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+    <link href="../js/cloudzoom/cloudzoom.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -60,7 +62,7 @@
     </header>
 
     <main class="main">
-      <div class="container">
+      <div class="container hidden-xs">
 
         <div class="row">
           <ol class="breadcrumb">
@@ -69,17 +71,22 @@
             <li class="active">Data</li>
           </ol>
         </div>
-        
-        <div class="card effect6">
+      </div>
 
-          <div class="row card-cap">
-            <div class="col-md-7">
+      <div class="container effect6">
+        
+        <div class="row card">
+          
+          <div class="card-cap">
+
+            <div class="col-sm-7">
               <h1 class="card-cap__name">
                 SJCAM5000
-                <span class="card__code">код 1573</span>
+                <span class="card-cap__code">код 1573</span>
               </h1>
             </div>
-            <div class="col-md-5">
+
+            <div class="col-sm-5">
               <div class="card-cap__price">
                 <span class="card-cap__old-price">15 600р.</span>
                 15 600р.
@@ -87,45 +94,102 @@
             </div>
           </div>
 
-          <div class="row card-desc">
-            <div class="col-md-7 card-desc__col">
+          <div class="card-desc">
+
+            <div class="col-md-7 card-desc__col-gall">
+
               <div class="gallery">
-                <div class="gallery__view">
-                  <div class="gallery__image"></div>
+                
+                <div class="gallery__view gallery__view_image sticker" id="gallery-view">
+
+                  <img class="gallery__image cloudzoom" 
+                        src="../img/fish-cam.jpg"
+                        data-cloudzoom = "zoomImage: '../img/fish-cam.jpg', zoomPosition: 'inside', autoInside: true"
+                  >
+
+                  <!-- 4:3 aspect ratio -->
+                  <div class="embed-responsive embed-responsive-16by9 gallery__video">
+                    <iframe class="embed-responsive-item" src="" id="gallery-video" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
+                  <div class="sticker__outer">
+                    <div class="sticker__item sticker__item_hit">
+                      <span class="sticker__text">ХИТ продаж</span>
+                    </div>
+                    <div class="sticker__item sticker__item_new">
+                      <span class="sticker__text">Новинка</span>
+                    </div>
+                    <div class="sticker__item sticker__item_sale">
+                      <span class="sticker__text">Скидка 50%</span>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="gallery__album">
+
                   <div class="gallery__item">
-                    <a href="" class="gallery__link">
-                      <img src="" alt="" class="gallery__trumb">
-                    </a>
+                    <span class="gallery__link">
+                      <img  src="../img/fish-cam.jpg" 
+                            class="gallery__trumb cloudzoom-gallery"
+                            data-cloudzoom = "useZoom: '.cloudzoom', image: '../img/fish-cam.jpg', zoomImage: '../img/fish-cam.jpg' "
+                      >
+                    </span>
                   </div>
                   <div class="gallery__item">
-                    <a href="" class="gallery__link">
-                      <img src="" alt="" class="gallery__trumb">
-                    </a>
+                    <span class="gallery__link">
+                      <img  src="../img/fish-cam.jpg" 
+                            class="gallery__trumb cloudzoom-gallery"
+                            data-cloudzoom = "useZoom: '.cloudzoom', image: '../img/fish-cam.jpg', zoomImage: '../img/fish-cam.jpg' "
+                      >
+                    </span>
                   </div>
                   <div class="gallery__item">
-                    <a href="" class="gallery__link">
-                      <img src="" alt="" class="gallery__trumb">
-                    </a>
+                    <span class="gallery__link">
+                      <img  src="../img/fish-cam.jpg" 
+                            class="gallery__trumb cloudzoom-gallery"
+                            data-cloudzoom = "useZoom: '.cloudzoom', image: '../img/fish-cam.jpg', zoomImage: '../img/fish-cam.jpg' "
+                      >
+                    </span>
                   </div>
                   <div class="gallery__item">
-                    <a href="" class="gallery__link">
-                      <img src="" alt="" class="gallery__trumb">
-                    </a>
+                    <span class="gallery__link">
+                      <img  src="../img/fish-cam2.jpg" 
+                            class="gallery__trumb cloudzoom-gallery"
+                            data-cloudzoom = "useZoom: '.cloudzoom', image: '../img/fish-cam2.jpg', zoomImage: '../img/fish-cam2.jpg', autoInside: true "
+                      >
+                    </span>
                   </div>
                   <div class="gallery__item">
-                    <a href="" class="gallery__link">
-                      <img src="" alt="" class="gallery__trumb">
-                    </a>
+                    <span class="gallery__link">
+                      <img  src="../img/fish-cam.jpg" 
+                            class="gallery__trumb cloudzoom-gallery"
+                            data-cloudzoom = "useZoom: '.cloudzoom', image: '../img/fish-cam.jpg', zoomImage: '../img/fish-cam.jpg' "
+                      >
+                    </span>
+                  </div>
+                  <div class="gallery__item">
+                    <span class="gallery__link">
+                      <img  src="../img/ico-video.jpg" 
+                            class="gallery__trumb videozoom-gallery"
+                            data-videozoom = "https://www.youtube.com/embed/01ck6yVtZd4"
+                      >
+                    </span>
+                  </div>
+                  <div class="gallery__item">
+                    <span class="gallery__link">
+                      <img  src="../img/ico-video.jpg" 
+                            class="gallery__trumb videozoom-gallery"
+                            data-videozoom = "https://www.youtube.com/embed/8MhURzxfjsQ"
+                      >
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-5 card-desc__col">
+            <div class="col-md-5 card-desc__col-desc">
 
               <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
+              <ul class="nav nav-tabs card-desc__tabs" role="tablist">
 
                 <li role="presentation" class="active">
                   <a href="#features" aria-controls="features" role="tab" data-toggle="tab">
@@ -141,10 +205,10 @@
               </ul>
 
               <!-- Tab panes -->
-              <div class="tab-content">
+              <div class="tab-content card-desc__cont">
 
                 <div role="tabpanel" class="tab-pane active" id="features">
-                  <ul class="featur">
+                  <ul class="featur featur_resp">
                     <li class="featur__item">
                       <span class="featur__name">Форматы видеосъемки</span>
                       <span class="featur__val">VGA, 720p, 1080p</span>
@@ -164,10 +228,93 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, sed suscipit temporibus repudiandae. Esse suscipit quos quidem aperiam, ipsum facilis eaque. Deleniti necessitatibus perferendis doloremque beatae provident id rerum assumenda.</p>
                 </div>
               </div>
+
+              <div class="card-desc__action">
+                <div class="btn-buy">
+                  <button class="btn btn-danger btn-lg btn-buy__inner" data-toggle="modal" data-target="#modal-order" data-desc-title="SJCAM5000" data-desc-price="15600">КУПИТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-info">
+            
+            <div class="col-sm-12">
+
+              <h2>Как отличить оригинал от подделки?</h2>
+
+              <div class="row">
+
+                <div class="col-sm-4">
+                  <img src="../img/original.jpg" alt="" class="img-responsive pull-left">
+                </div>
+
+                <div class="col-sm-8">
+                  <p>87% камер SJCAM - подделка! Все оригинальные камеры SJCAM, должны обязательно продаваться с заводским серийным номером, иметь логотип SJCAM на передней панели, гарантийный талон и защитную скретч код с голограммой на коробке.</p>
+                  <p>Если хоть одного из этих атрибутов не хватает, значит вам пытаются продать подделку.</p>
+                  <p>100% камер SJCAM с ценой ниже рыночной - подделка.</p>
+                </div>
+              </div>
+              
+              <h2>Аксессуары для SJCAM5000</h2>
+              
+              <div class="acces">
+                <ul class="acces__inner" id="acces">
+
+                  <li class="acces__item">
+                    <div class="acces__title">Монопод</div>
+                    <a href="" class="acces__img"><img src="../img/fish-mon.jpg"></a>
+                    <div class="acces__price">600p.</div>
+                    <div class="acces__action">
+                      <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#modal-order" data-desc-title="Монопод" data-desc-price="600">КУПИТЬ</button>
+                    </div>
+                  </li>
+
+                  <li class="acces__item">
+                    <div class="acces__title">Стейдикам</div>
+                    <a href="" class="acces__img"><img src="../img/fish-mon.jpg"></a>
+                    <div class="acces__price">600p.</div>
+                    <div class="acces__action">
+                      <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#modal-order" data-desc-title="Стейдикам" data-desc-price="2300">КУПИТЬ</button>
+                    </div>
+                  </li>
+
+                  <li class="acces__item">
+                    <div class="acces__title">Флеш накопитель 16Гб</div>
+                    <a href="" class="acces__img"><img src="../img/fish-mon.jpg"></a>
+                    <div class="acces__price">600p.</div>
+                    <div class="acces__action">
+                      <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#modal-order" data-desc-title="Флеш накопитель 16Гб" data-desc-price="800">КУПИТЬ</button>
+                    </div>
+                  </li>
+
+                  <li class="acces__item">
+                    <div class="acces__title">Монопод</div>
+                    <a href="" class="acces__img"><img src="../img/fish-mon.jpg"></a>
+                    <div class="acces__price">600p.</div>
+                    <div class="acces__action">
+                      <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
+                      <button class="btn btn-danger">КУПИТЬ</button>
+                    </div>
+                  </li>
+
+                  <li class="acces__item">
+                    <div class="acces__title">Монопод</div>
+                    <a href="" class="acces__img"><img src="../img/fish-mon.jpg"></a>
+                    <div class="acces__price">600p.</div>
+                    <div class="acces__action">
+                      <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
+                      <button class="btn btn-danger">КУПИТЬ</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </main>
 
@@ -208,9 +355,91 @@
       </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-order" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <form class="modal-content" id="form-modal-order">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="modal-order-title">SJCAM5000</h4>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="name">Представьтесь пожалуйста</label>
+              <input type="text" name="name" class="form-control" placeholder="Иванов Иван">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email адрес</label>
+              <input type="email" name="email" class="form-control" placeholder="name@mail.ru">
+            </div>
+
+            <div class="form-group">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" class="form-control" placeholder="+7 (123) 456-78-90">
+            </div>
+            
+            <div class="radio">
+
+              <label class="checkbox-inline">
+                <input type="radio" name="delivery" value="delivery" checked>Доставка
+              </label>
+
+              <label class="checkbox-inline">
+                <input type="radio" name="delivery" value="pickup">Самовывоз
+              </label>
+            </div>
+
+            <div class="form-group" id="group-address" >
+              <label for="address">Адрес</label>
+              <input type="text" class="form-control" name="address" placeholder="Россия, 460040, г.Оренбург, ул. 75 линия, д.2, кв.3">
+            </div>
+
+            <div class="form-group">
+              <label for="count">Количество</label>
+              <select class="form-control" name="count">
+                <option value="1" checked>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="price-full">Общая стоимость</label>
+              <input type="hidden" name="price" value="4500">
+              <input type="hidden" name="price-delivery" value="400">            
+              <input type="text" class="form-control" name="price-full" readonly>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-danger">Оформить заказ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.bxslider/jquery.bxslider.js"></script>
+    <script src="../js/cloudzoom/cloudzoom.js"></script>
+    <script src="../js/validator/dist/jquery.validate.js"></script>
+    <script src="../js/acces.js"></script> 
+    <script src="../js/gallery.js"></script> 
+    <script src="../js/order.js"></script> 
+    <script src="../js/form.js"></script> 
   </body>
 </html>
