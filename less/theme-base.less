@@ -49,6 +49,7 @@ h2 {
     font-size: 0px;
     white-space: nowrap;
     box-shadow: -1px 1px 3px rgba(0,0,0,0.2);
+    color: #000;
 
     & + & {
       margin-top: -14px;
@@ -331,6 +332,11 @@ h2 {
 
 .prod {
   padding-top: 50px;
+
+  &_inpage {
+
+    padding-top: 0;
+  }
 
   &__item {
     border: 1px solid #e5e5e5;
@@ -702,8 +708,8 @@ h2 {
     &:focus,
     &:active {
       border-color: #000;
-
       background: #cc0000;
+      outline: none;
     }
   }
 }
@@ -844,6 +850,18 @@ h2 {
     .clearfix();
   }
 }
+
+
+
+//
+// Unlicenzed hide
+// --------------------------------------------------
+
+.cloudzoom-blank > div:nth-child(3) {
+
+  display: none !important;
+}
+
 
 
 

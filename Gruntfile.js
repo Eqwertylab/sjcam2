@@ -127,7 +127,9 @@ module.exports = function (grunt) {
           'js/jquery.bxslider/jquery.bxslider.js',
           'js/cloudzoom/cloudzoom.js',
           'js/acces.js',
-          'js/gallery.js'
+          'js/gallery.js',
+          'js/order.js',
+          'js/form.js'
         ],
         dest: 'dist/js/custom.js'
       }

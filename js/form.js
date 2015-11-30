@@ -3,7 +3,6 @@ var order_form_validator = $("#form-modal-order").validate({
   rules: {
     name: "required",
     email: {
-      required: true,
       email: true
     },
     tel: {
@@ -22,7 +21,6 @@ var order_form_validator = $("#form-modal-order").validate({
   messages: {
     name: "Укажите ваше имя",
     email: {
-      required: "Укажите e-mail для связи",
       email: "E-mail должен соответствовать формату name@domain.com"
     },
     tel: {

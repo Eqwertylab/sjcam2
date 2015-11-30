@@ -33,6 +33,7 @@ h2 {
   font-size: 0px;
   white-space: nowrap;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #000;
 }
 .sticker__item + .sticker__item {
   margin-top: -14px;
@@ -218,6 +219,9 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 }
 .prod {
   padding-top: 50px;
+}
+.prod_inpage {
+  padding-top: 0;
 }
 .prod__item {
   border: 1px solid #e5e5e5;
@@ -490,6 +494,7 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 .btn-buy__inner:active {
   border-color: #000;
   background: #cc0000;
+  outline: none;
 }
 .card-info {
   font-size: 1rem;
@@ -581,6 +586,9 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 }
 .article__content:after {
   clear: both;
+}
+.cloudzoom-blank > div:nth-child(3) {
+  display: none !important;
 }
 .box {
   margin-bottom: 30px;
