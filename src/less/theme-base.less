@@ -322,6 +322,12 @@ h2 {
 
   background: #f7f7f7;
   .clearfix();
+
+  &__content,
+  &__sidebar {
+
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -358,7 +364,7 @@ h2 {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 5px;
-    margin: 0;
+    margin-top: 0;
   }
 
   &__image {
@@ -617,7 +623,6 @@ h2 {
   &__trumb {
 
     width: 100%;
-    transition: opacity 0.5s;
 
     &:hover {
 
@@ -840,6 +845,11 @@ h2 {
     }
   }
 
+  &__caption {
+
+    margin-top: 0;
+  }
+
   &__action {
 
     text-align: right;
@@ -871,6 +881,7 @@ h2 {
 .box {
 
   margin-bottom: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
   &__inner {
   

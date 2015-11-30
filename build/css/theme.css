@@ -217,6 +217,10 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 .main:after {
   clear: both;
 }
+.main__content,
+.main__sidebar {
+  margin-bottom: 30px;
+}
 .prod {
   padding-top: 50px;
 }
@@ -239,7 +243,7 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 5px;
-  margin: 0;
+  margin-top: 0;
 }
 .prod__image {
   width: 100%;
@@ -418,7 +422,6 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 }
 .gallery__trumb {
   width: 100%;
-  transition: opacity 0.5s;
 }
 .gallery__trumb:hover {
   opacity: 0.8;
@@ -576,6 +579,9 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 .article__item:last-child {
   border-bottom: none;
 }
+.article__caption {
+  margin-top: 0;
+}
 .article__action {
   text-align: right;
 }
@@ -592,6 +598,7 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
 }
 .box {
   margin-bottom: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 }
 .box__inner {
   position: relative;

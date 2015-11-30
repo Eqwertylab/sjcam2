@@ -79,7 +79,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption sticker">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">
                   <span class="prod__old-price">25 000p.</span>
                   15 600p.
@@ -123,7 +123,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">15 600p.</div>
               </div>
               <div class="prod__details">
@@ -153,7 +153,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">15 600p.</div>
               </div>
               <div class="prod__details">
@@ -183,7 +183,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption sticker">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">
                   <span class="prod__old-price">25 000p.</span>
                   15 600p.
@@ -227,7 +227,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">15 600p.</div>
               </div>
               <div class="prod__details">
@@ -257,7 +257,7 @@
             <div class="prod__item effect6">
               <div class="prod__caption">
                 <h3 class="prod__title">Thumbnail label</h3>
-                <img class="prod__image" src="../img/fish-cam.jpg">
+                <img class="prod__image" src="img/fish-cam.jpg">
                 <div class="prod__price">15 600p.</div>
               </div>
               <div class="prod__details">
@@ -326,10 +326,10 @@
     <!-- Modal -->
     <div class="modal fade" id="modal-order" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-md" role="document">
-        <form class="modal-content" id="form-modal-order">
+        <form class="modal-content" id="form-modal-order" action="action.php" method="get">
 
           <div class="modal-header">
-            <button  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="modal-order-title">SJCAM5000</h4>
           </div>
 
@@ -401,13 +401,34 @@
           </div>
 
           <div class="modal-footer">
-            <button  class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             <button type="submit" class="btn btn-danger">Оформить заказ</button>
           </div>
         </form>
       </div>
     </div>
 
+    <!-- Response -->
+    <div class="modal fade" id="modal-response" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="modal-response-title"><!-- response.title --></h4>
+          </div>
+
+          <div class="modal-body" id="modal-response-body">
+            <!-- response.content -->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script src="js/script.js"></script>
   </body>
 </html>

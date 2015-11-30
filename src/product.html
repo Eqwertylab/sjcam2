@@ -130,7 +130,7 @@
 
                   <div class="gallery__item">
                     <span class="gallery__link">
-                      <img  src="img/fish-cam.jpg" 
+                      <img  src="img/fish-cam-small.jpg" 
                             class="gallery__trumb cloudzoom-gallery"
                             data-cloudzoom = "useZoom: '.cloudzoom', image: 'img/fish-cam.jpg', zoomImage: 'img/fish-cam.jpg' "
                       >
@@ -138,23 +138,7 @@
                   </div>
                   <div class="gallery__item">
                     <span class="gallery__link">
-                      <img  src="img/fish-cam.jpg" 
-                            class="gallery__trumb cloudzoom-gallery"
-                            data-cloudzoom = "useZoom: '.cloudzoom', image: 'img/fish-cam.jpg', zoomImage: 'img/fish-cam.jpg' "
-                      >
-                    </span>
-                  </div>
-                  <div class="gallery__item">
-                    <span class="gallery__link">
-                      <img  src="img/fish-cam.jpg" 
-                            class="gallery__trumb cloudzoom-gallery"
-                            data-cloudzoom = "useZoom: '.cloudzoom', image: 'img/fish-cam.jpg', zoomImage: 'img/fish-cam.jpg' "
-                      >
-                    </span>
-                  </div>
-                  <div class="gallery__item">
-                    <span class="gallery__link">
-                      <img  src="img/fish-cam2.jpg" 
+                      <img  src="img/fish-cam2-small.jpg" 
                             class="gallery__trumb cloudzoom-gallery"
                             data-cloudzoom = "useZoom: '.cloudzoom', image: 'img/fish-cam2.jpg', zoomImage: 'img/fish-cam2.jpg', autoInside: true "
                       >
@@ -162,7 +146,7 @@
                   </div>
                   <div class="gallery__item">
                     <span class="gallery__link">
-                      <img  src="img/fish-cam.jpg" 
+                      <img  src="img/fish-cam-small.jpg" 
                             class="gallery__trumb cloudzoom-gallery"
                             data-cloudzoom = "useZoom: '.cloudzoom', image: 'img/fish-cam.jpg', zoomImage: 'img/fish-cam.jpg' "
                       >
@@ -311,7 +295,7 @@
                     <div class="acces__price">600p.</div>
                     <div class="acces__action">
                       <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
-                      <button class="btn btn-danger">КУПИТЬ</button>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#modal-order" data-desc-title="Стейдикам" data-desc-price="2300">КУПИТЬ</button>
                     </div>
                   </li>
 
@@ -321,7 +305,7 @@
                     <div class="acces__price">600p.</div>
                     <div class="acces__action">
                       <a class="btn btn-xs btn-link">ПОДРОБНЕЕ</a>
-                      <button class="btn btn-danger">КУПИТЬ</button>
+                      <button class="btn btn-danger" data-toggle="modal" data-target="#modal-order" data-desc-title="Стейдикам" data-desc-price="2300">КУПИТЬ</button>
                     </div>
                   </li>
                 </ul>
@@ -372,7 +356,7 @@
     <!-- Modal -->
     <div class="modal fade" id="modal-order" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-md" role="document">
-        <form class="modal-content" id="form-modal-order">
+        <form class="modal-content" id="form-modal-order" action="action.php" method="get">
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -453,6 +437,27 @@
         </form>
       </div>
     </div>
+
+    <!-- Response -->
+    <div class="modal fade" id="modal-response" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="modal-response-title"><!-- response.title --></h4>
+          </div>
+
+          <div class="modal-body" id="modal-response-body">
+            <!-- response.content -->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <!-- build:js js/script.js -->
     <script src="js/jquery-1.11.3.js"></script>
@@ -462,6 +467,7 @@
     <script src="js/jquery.bxslider/jquery.bxslider.js"></script>
     <script src="js/cloudzoom/cloudzoom.js"></script>
     <script src="js/validator/dist/jquery.validate.js"></script>
+    <script src="js/jquery.form.js"></script>
     <script src="js/acces.js"></script> 
     <script src="js/gallery.js"></script> 
     <script src="js/order.js"></script> 
