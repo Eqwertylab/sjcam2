@@ -1,8 +1,7 @@
-1) git clone https://github.com/Eqwertylab/sjcam2.git
-2) npm install
+Для сборки билда используется Grunt
 
-Если нужно сделать билд делаем так "grunt build"
-Если нужно править стили grunt "watch:theme" запускается вотчер отслеживающий less файлы. 
+Если нужно сделать билд  "grunt build"
+Если нужно править стили "grunt watch:theme", запускается вотчер отслеживающий less файлы со стилями и компилирует их в css. 
 
 Стили шаблона в файлах:
 
@@ -11,6 +10,4 @@
 	theme-sm.less
 	theme-md.less
 	theme-lg.less
-	
-все остальное bootstrap =)
   
