@@ -51,14 +51,14 @@ module.exports = function(grunt) {
 
       compileCore: {
 
-        src: 'src/less/bootstrap.less',
-        dest: 'build/css/bootstrap.css'
+        src:  'src/less/bootstrap.less',
+        dest: 'src/css/bootstrap.css'
       },
 
       compileTheme: {
 
-        src: 'src/less/theme.less',
-        dest: 'build/css/theme.css'
+        src:  'src/less/theme.less',
+        dest: 'src/css/theme.css'
       }
     },
 
