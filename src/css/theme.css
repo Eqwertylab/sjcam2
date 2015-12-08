@@ -600,6 +600,12 @@ fieldset[disabled] .navbar-trans .btn-link:focus {
   margin-bottom: 30px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 }
+.box_round {
+  border-radius: 4px;
+}
+.box_round > .box__inner {
+  border-radius: 4px;
+}
 .box__inner {
   position: relative;
   background: #fff;

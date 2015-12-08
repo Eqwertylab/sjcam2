@@ -884,6 +884,16 @@ h2 {
   margin-bottom: 30px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
+  &_round {
+    
+    border-radius: @border-radius-base;
+
+    > .box__inner {
+
+      border-radius: @border-radius-base;      
+    }
+  }
+
   &__inner {
   
     position: relative;
